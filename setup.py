@@ -26,6 +26,8 @@ setup(
     author_email='maximilian.albert@gmail.com',
     license='MIT',
     packages=['scent'],
+    install_requires=[],
+    tests_require=['pytest', 'pytest-cov'],
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
