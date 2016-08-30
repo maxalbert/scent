@@ -1,2 +1,2 @@
-from .decorators import MissingLabelError
-from .decorators import duplication
+from .annotators import MissingLabelError
+from .annotators import duplication

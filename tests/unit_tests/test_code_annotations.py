@@ -6,7 +6,7 @@ from scent import MissingLabelError
 
 class TestCodeSmellAnnotations:
     """
-    Unit tests for the code smell decorators.
+    Unit tests for the code smell annotators.
     """
 
     @classmethod

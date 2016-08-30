@@ -1,3 +1,7 @@
+"""
+Annotators for common code smells.
+"""
+
 from functools import wraps
 
 
