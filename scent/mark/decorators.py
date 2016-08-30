@@ -7,7 +7,7 @@ class MissingTagError(Exception):
     """
 
 
-def duplication(tag, *, comment=None):
+def duplication(tag, comment=None):
     """
 
     """
