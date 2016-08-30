@@ -14,12 +14,9 @@ class duplication:
 
     def __init__(self, label, comment=None):
         """
-        Annotator to mark code duplication.
-
         Args:
             label (str):  Label to identify multiple instances of the duplicate code.
-            comment (str, optional):  Optional comment. This is intended for other
-                human developers and is currently ignored.
+            comment (str, optional):  Optional comment (intended for other human developers).
 
         """
         if label == "":
