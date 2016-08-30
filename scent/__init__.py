@@ -13,3 +13,5 @@ __version__ = '0.1.0'
 __author__ = 'Maximilian Albert'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2016 Maximilian Albert'
+
+from .mark import MissingTagError
