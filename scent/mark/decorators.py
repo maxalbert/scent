@@ -1,9 +1,9 @@
 from functools import wraps
 
 
-class MissingTagError(Exception):
+class MissingLabelError(Exception):
     """
-    Custom exception to indicate a missing tag in a code smell annotation.
+    Custom exception to indicate a missing label in a code smell annotation.
     """
 
 
@@ -12,18 +12,18 @@ class duplication:
     Annotator to mark code duplication
     """
 
-    def __init__(self, tag, comment=None):
+    def __init__(self, label, comment=None):
         """
         Annotator to mark code duplication.
 
         Args:
-            tag (str):  Label to identify multiple instances of the duplicate code.
+            label (str):  Label to identify multiple instances of the duplicate code.
             comment (str, optional):  Optional comment. This is intended for other
                 human developers and is currently ignored.
 
         """
-        if tag == "":
-            raise MissingTagError("Tag must not be empty.")
+        if label == "":
+            raise MissingLabelError("Label must not be empty.")
 
         # For now we are ignoring all arguments because the only
         # purpose of this class is to act as an annotation.

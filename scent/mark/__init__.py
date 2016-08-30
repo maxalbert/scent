@@ -1,2 +1,2 @@
-from .decorators import MissingTagError
+from .decorators import MissingLabelError
 from .decorators import duplication
