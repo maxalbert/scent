@@ -1,0 +1,5 @@
+name: scent
+dependencies:
+  - python
+  - pytest
+  - pytest-cov
