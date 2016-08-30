@@ -1,4 +1,4 @@
-"""Scent - Easy annotation of smells in your code.
+"""Scent - Easy annotation of code smells.
 
 See: https://github.com/maxalbert/scent
 """
@@ -19,7 +19,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='scent',
     version=__version__,
-    description='Easy annotation of smells in your code.',
+    description='Easy annotation of code smells.',
     long_description=long_description,
     url='https://github.com/maxalbert/scent',
     author='Maximilian Albert',
