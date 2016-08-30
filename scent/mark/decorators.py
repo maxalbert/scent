@@ -35,12 +35,7 @@ class duplication:
         the decorated function unaltered because the only purpose
         of this class is to document that there is duplication.
         """
-
-        @wraps(func)
-        def wrapper(func):
-            return func  # pragma: no cover  (as we can't be sure that a decorated function is actually called)
-
-        return wrapper
+        return func
 
 # Define shorter alias for easier use
 dup = duplication
