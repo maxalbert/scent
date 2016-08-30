@@ -22,7 +22,7 @@ class TestCodeSmellAnnotations:
 
         cls.dummy_func = dummy_func
 
-    def test_can_annotate_function_without_changing_it(self):
+    def test_annotating_a_function_does_not_change_its_attributes(self):
         """
         Annotating a function does not change its attributes.
         """
@@ -30,6 +30,12 @@ class TestCodeSmellAnnotations:
 
         assert dummy_func.__name__ == 'dummy_func'
         assert dummy_func.__doc__ == 'Dummy function'
+
+    def test_standalone_annotation(self):
+        """
+        Annotations can occur "standalone", without decorating a function or class.
+        """
+        scent.mark.duplication(tag='foobar', comment='Standalone annotation.')
 
     def test_tag_must_be_specified(self):
         """
