@@ -1,3 +1,6 @@
+.. image:: https://circleci.com/gh/maxalbert/scent.svg?style=shield
+   :target: https://circleci.com/gh/maxalbert/scent
+
 About Scent
 ===========
 
