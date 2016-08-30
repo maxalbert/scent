@@ -1,0 +1,25 @@
+# Configuration file for continuous integration on CircleCI
+
+machine:
+  environment:
+    MINICONDA_ROOT: $HOME/miniconda
+    PATH: $MINICONDA_ROOT/bin:$PATH
+
+dependencies:
+  override:
+    # Install conda and add it to PATH
+    - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    - bash miniconda.sh -b -p $MINICONDA_ROOT
+    - hash -r
+
+    # Apply some conda settings, update conda and print info about the installation (for debugging)
+    - conda config --set always_yes yes
+    - conda update -q conda
+    - conda info -a
+
+    # Install dependencies into the conda root environment.
+    - conda env update --name root -f environment.yml
+
+test:
+  override:
+    - make test
