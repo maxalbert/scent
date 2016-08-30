@@ -2,7 +2,7 @@ PKGNAME = scent
 PYTEST = py.test
 PYTEST_OPTIONS = -sv --cov=$(PKGNAME) --cov-report=term-missing
 
-all:
+all: test
 
 test: unit-tests
 
@@ -15,4 +15,4 @@ build:
 clean:
 	rm -rf build dist $(PKGNAME).egg-info
 
-.PHONY: all clean test unit-tests
+.PHONY: all build clean test unit-tests
