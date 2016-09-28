@@ -69,5 +69,33 @@ class inconsistency:
         """
         return func
 
+@duplication(label='hardcoded-value-annotator', comment='This is almost an exact copy of the "duplication" annotator.')
+class hardcoded_value:
+    """
+    Annotator to mark hard-coded values which should be turned into variables.
+    """
+
+    def __init__(self, label, comment=None):
+        """
+        Args:
+            label (str):  Label to identify all occurrences of this hard-coded value.
+            comment (str, optional):  Optional comment (intended for other human developers).
+
+        """
+        if label == "":
+            raise MissingLabelError("Label must not be empty.")
+
+        # For now we are ignoring all arguments because the only
+        # purpose of this class is to act as an annotation.
+
+    def __call__(self, func):
+        """
+        This is called when the annotator is used as a decorator,
+        for example as `@scent.mark.hardcoded_value(...)`. We return
+        the decorated function unaltered because the only purpose
+        of this class is to document that there is duplication.
+        """
+        return func
+
 # Define shorter alias for easier use
 dup = duplication
