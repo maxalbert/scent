@@ -4,7 +4,7 @@ Annotators for common code smells.
 
 from functools import wraps
 
-__all__ = ['dup', 'duplication', 'inconsistency', 'hardcoded_value', 'procedural_polymorphism']
+__all__ = ['dup', 'duplication', 'inconsistency', 'hardcoded_value', 'procedural_polymorphism', 'primitive_obsession']
 
 
 class MissingLabelError(Exception):
