@@ -41,7 +41,7 @@ class duplication:
         return func
 
 
-@duplication(label='inconsistency-annotator', comment='This is almost an exact copy of the "duplication" annotator.')
+@duplication(label='annotator-definition', comment='This is almost an exact copy of the "duplication" annotator.')
 class inconsistency:
     """
     Annotator to mark code inconsistencies between classes/functions with a similar purpose.
@@ -69,7 +69,7 @@ class inconsistency:
         """
         return func
 
-@duplication(label='hardcoded-value-annotator', comment='This is almost an exact copy of the "duplication" annotator.')
+@duplication(label='annotator-definition', comment='This is almost an exact copy of the "duplication" annotator.')
 class hardcoded_value:
     """
     Annotator to mark hard-coded values which should be turned into variables.
@@ -97,7 +97,7 @@ class hardcoded_value:
         """
         return func
 
-@duplication(label='procedural-polymorphism-annotator', comment='This is almost an exact copy of the "duplication" annotator.')
+@duplication(label='annotator-definition', comment='This is almost an exact copy of the "duplication" annotator.')
 class procedural_polymorphism:
     """
     Annotator to mark hard-coded values which should be turned into variables.
