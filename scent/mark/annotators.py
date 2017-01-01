@@ -125,5 +125,34 @@ class procedural_polymorphism:
         """
         return func
 
+
+@duplication(label='annotator-definition', comment='This is almost an exact copy of the "duplication" annotator.')
+class primitive_obsession:
+    """
+    Annotator to mark hard-coded values which should be turned into variables.
+    """
+
+    def __init__(self, *, label=None, comment=None):
+        """
+        Args:
+            label (str):  Label to identify all occurrences of this code smell.
+            comment (str, optional):  Optional comment (intended for other human developers).
+
+        """
+        if label == "":
+            raise MissingLabelError("Label must not be empty.")
+
+        # For now we are ignoring all arguments because the only
+        # purpose of this class is to act as an annotation.
+
+    def __call__(self, func):
+        """
+        This is called when the annotator is used as a decorator,
+        for example as `@scent.mark.procedural_polymorphism(...)`.
+        We return the decorated function unaltered because the only
+        purpose of this class is to document that there is a code smell.
+        """
+        return func
+
 # Define shorter alias for easier use
 dup = duplication
