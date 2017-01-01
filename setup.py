@@ -5,6 +5,8 @@ See: https://github.com/maxalbert/scent
 
 #!/usr/bin/env python
 
+import versioneer
+
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
@@ -18,7 +20,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='scent',
-    version=__version__,
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     description='Easy annotation of code smells.',
     long_description=long_description,
     url='https://github.com/maxalbert/scent',
