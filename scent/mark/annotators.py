@@ -18,7 +18,7 @@ class duplication:
     Annotator to mark code duplication
     """
 
-    def __init__(self, label, comment=None):
+    def __init__(self, *, label, comment=None):
         """
         Args:
             label (str):  Label to identify multiple instances of the duplicate code.
@@ -47,7 +47,7 @@ class inconsistency:
     Annotator to mark code inconsistencies between classes/functions with a similar purpose.
     """
 
-    def __init__(self, label, comment=None):
+    def __init__(self, *, label, comment=None):
         """
         Args:
             label (str):  Label to identify all participants in this inconsistency.
@@ -75,7 +75,7 @@ class hardcoded_value:
     Annotator to mark hard-coded values which should be turned into variables.
     """
 
-    def __init__(self, label, comment=None):
+    def __init__(self, *, label, comment=None):
         """
         Args:
             label (str):  Label to identify all occurrences of this hard-coded value.
@@ -103,7 +103,7 @@ class procedural_polymorphism:
     Annotator to mark hard-coded values which should be turned into variables.
     """
 
-    def __init__(self, label, comment=None):
+    def __init__(self, *, label, comment=None):
         """
         Args:
             label (str):  Label to identify all occurrences of this code smell.
