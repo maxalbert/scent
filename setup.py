@@ -28,7 +28,7 @@ setup(
     author='Maximilian Albert',
     author_email='maximilian.albert@gmail.com',
     license='MIT',
-    packages=['scent'],
+    packages=['scent', 'scent.mark'],
     install_requires=[],
     tests_require=['pytest', 'pytest-cov'],
 
