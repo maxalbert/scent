@@ -4,7 +4,8 @@ Annotators for common code smells.
 
 from functools import wraps
 
-__all__ = ['dup', 'duplication', 'inconsistency', 'hardcoded_value', 'procedural_polymorphism', 'primitive_obsession']
+__all__ = ['dup', 'duplication', 'inconsistency', 'hardcoded_value', 'procedural_polymorphism', 'primitive_obsession',
+           'feature_envy']
 
 
 class MissingLabelError(Exception):
@@ -148,11 +149,40 @@ class primitive_obsession:
     def __call__(self, func):
         """
         This is called when the annotator is used as a decorator,
-        for example as `@scent.mark.procedural_polymorphism(...)`.
+        for example as `@scent.mark.primitive_obsession(...)`.
         We return the decorated function unaltered because the only
         purpose of this class is to document that there is a code smell.
         """
         return func
+
+@duplication(label='annotator-definition', comment='This is almost an exact copy of the "duplication" annotator.')
+class feature_envy:
+    """
+    Annotator to mark attributes on one class that really belong into a different class.
+    """
+
+    def __init__(self, *, label=None, comment=None):
+        """
+        Args:
+            label (str):  Label to identify all occurrences of this code smell.
+            comment (str, optional):  Optional comment (intended for other human developers).
+
+        """
+        if label == "":
+            raise MissingLabelError("Label must not be empty.")
+
+            # For now we are ignoring all arguments because the only
+            # purpose of this class is to act as an annotation.
+
+    def __call__(self, func):
+        """
+        This is called when the annotator is used as a decorator,
+        for example as `@scent.mark.feature_envy(...)`.
+        We return the decorated function unaltered because the only
+        purpose of this class is to document that there is a code smell.
+        """
+        return func
+
 
 # Define shorter alias for easier use
 dup = duplication
